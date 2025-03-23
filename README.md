@@ -20,7 +20,7 @@ This project provides a simple URL shortening tool using the [CleanURI API](http
 ### 2. Installation
 
 ```bash
-pip install httpx fastmcp
+uv add httpx 'mcp[cli]'
 ```
 
 ### 3. Running
