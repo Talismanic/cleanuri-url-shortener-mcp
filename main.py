@@ -8,7 +8,7 @@ CLEANURI_API_URL = "https://cleanuri.com/api/v1/shorten"
 
 async def shorten_url(original_url: str) -> str | None:
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
-    data = {"url": CLEANURI_API_URL}
+    data = {"url": original_url}
 
     async with httpx.AsyncClient() as client:
         try:
