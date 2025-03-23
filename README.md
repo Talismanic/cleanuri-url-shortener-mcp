@@ -1,5 +1,7 @@
 # URL Shortener MCP Tool
 
+[![smithery badge](https://smithery.ai/badge/@Talismanic/cleanuri-url-shortener-mcp)](https://smithery.ai/server/@Talismanic/cleanuri-url-shortener-mcp)
+
 This project provides a simple URL shortening tool using the [CleanURI API](https://cleanuri.com/) and is designed to run as a [FastMCP](https://github.com/multiprompt/fastmcp) server tool.
 
 ## ✨ Features
@@ -19,6 +21,15 @@ This project provides a simple URL shortening tool using the [CleanURI API](http
 
 ### 2. Installation
 
+### Installing via Smithery
+
+To install URL Shortener Tool for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Talismanic/cleanuri-url-shortener-mcp):
+
+```bash
+npx -y @smithery/cli install @Talismanic/cleanuri-url-shortener-mcp --client claude
+```
+
+### Manual Installation
 ```bash
 uv add httpx 'mcp[cli]'
 ```
