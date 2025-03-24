@@ -19,7 +19,7 @@ This project provides a simple URL shortening tool using the [CleanURI API](http
 - `httpx`
 - `fastmcp`
 
-### 2. Installation
+## 2. Installation
 
 ### Installing via Smithery
 
@@ -33,24 +33,51 @@ npx -y @smithery/cli install @Talismanic/cleanuri-url-shortener-mcp --client cla
 ```bash
 uv add httpx 'mcp[cli]'
 ```
-
+or for Docker based installation:
 ### 3. Running
 ```
 uv run main.py
 ```
+or for dockers:
+```
+docker build -t url-shortener .
+```
 
 ### 4. Adding in Claude Desktop
+
+#### With the uv
 ```
 {
   "mcpServers": {
     "url-shortener": {
-      "command": "/Users/mohammedmehedihasan/.local/bin/uv",
+      "command": "/Users/{userName}/.local/bin/uv",
       "args": [
         "--directory",
-        "/Users/mohammedmehedihasan/personal/codes/mcp-servers/cleanuri-url-shortener-mcp",
+        "{patht_to_repo}/cleanuri-url-shortener-mcp",
         "run",
         "main.py"
       ]
     }
   }
-}```
+}
+```
+
+#### With Docker
+```
+{
+  "mcpServers": {
+    "url-shortener": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "-e",
+        "DOCKER_CONTAINER=true",
+        "url-shortener"
+      ]
+    }
+  }
+}
+```
