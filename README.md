@@ -33,15 +33,16 @@ npx -y @smithery/cli install @Talismanic/cleanuri-url-shortener-mcp --client cla
 ```bash
 uv add httpx 'mcp[cli]'
 ```
-or for Docker based installation:
+### Docker Installation:
+```
+docker build -t url-shortener .
+```
 ### 3. Running
 ```
 uv run main.py
 ```
-or for dockers:
-```
-docker build -t url-shortener .
-```
+For docker based use, we dont need to do anything here.
+
 
 ### 4. Adding in Claude Desktop
 
