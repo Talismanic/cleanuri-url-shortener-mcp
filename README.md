@@ -53,7 +53,7 @@ docker build -t url-shortener .
       "command": "/Users/{userName}/.local/bin/uv",
       "args": [
         "--directory",
-        "{patht_to_repo}/cleanuri-url-shortener-mcp",
+        "{path_to_repo}/cleanuri-url-shortener-mcp",
         "run",
         "main.py"
       ]
