@@ -2,6 +2,10 @@
 
 [![smithery badge](https://smithery.ai/badge/@Talismanic/cleanuri-url-shortener-mcp)](https://smithery.ai/server/@Talismanic/cleanuri-url-shortener-mcp)
 
+<a href="https://glama.ai/mcp/servers/@Talismanic/cleanuri-url-shortener-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@Talismanic/cleanuri-url-shortener-mcp/badge" alt="URL Shortener MCP server" />
+</a>
+
 This project provides a simple URL shortening tool using the [CleanURI API](https://cleanuri.com/) and is designed to run as a [FastMCP](https://github.com/multiprompt/fastmcp) server tool.
 
 ## ✨ Features
