@@ -1,6 +1,12 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/talismanic-cleanuri-url-shortener-mcp-badge.png)](https://mseep.ai/app/talismanic-cleanuri-url-shortener-mcp)
+
 # URL Shortener MCP Tool
 
 [![smithery badge](https://smithery.ai/badge/@Talismanic/cleanuri-url-shortener-mcp)](https://smithery.ai/server/@Talismanic/cleanuri-url-shortener-mcp)
+
+<a href="https://glama.ai/mcp/servers/@Talismanic/cleanuri-url-shortener-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@Talismanic/cleanuri-url-shortener-mcp/badge" alt="URL Shortener MCP server" />
+</a>
 
 This project provides a simple URL shortening tool using the [CleanURI API](https://cleanuri.com/) and is designed to run as a [FastMCP](https://github.com/multiprompt/fastmcp) server tool.
 
@@ -19,7 +25,7 @@ This project provides a simple URL shortening tool using the [CleanURI API](http
 - `httpx`
 - `fastmcp`
 
-### 2. Installation
+## 2. Installation
 
 ### Installing via Smithery
 
@@ -33,24 +39,52 @@ npx -y @smithery/cli install @Talismanic/cleanuri-url-shortener-mcp --client cla
 ```bash
 uv add httpx 'mcp[cli]'
 ```
-
+### Docker Installation:
+```
+docker build -t url-shortener .
+```
 ### 3. Running
 ```
 uv run main.py
 ```
+For docker based use, we dont need to do anything here.
+
 
 ### 4. Adding in Claude Desktop
+
+#### With the uv
 ```
 {
   "mcpServers": {
     "url-shortener": {
-      "command": "/Users/mohammedmehedihasan/.local/bin/uv",
+      "command": "/Users/{userName}/.local/bin/uv",
       "args": [
         "--directory",
-        "/Users/mohammedmehedihasan/personal/codes/mcp-servers/cleanuri-url-shortener-mcp",
+        "{path_to_repo}/cleanuri-url-shortener-mcp",
         "run",
         "main.py"
       ]
     }
   }
-}```
+}
+```
+
+#### With Docker
+```
+{
+  "mcpServers": {
+    "url-shortener": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "-e",
+        "DOCKER_CONTAINER=true",
+        "url-shortener"
+      ]
+    }
+  }
+}
+```
